@@ -1,0 +1,120 @@
+ * {
+    box-sizing: border-box;
+}
+:root {
+    --cor-primaria: #1a73e8;
+    --cor-secundaria: #e8f0fe;
+    --cor-fundo: #f2f2f2;
+    --cor-texto: #222;
+    --cor-header: #222;
+    --cor-footer: #222;
+
+    --fonte-base: Arial, sans-serif;
+
+    --esp-p: 8px;
+    --esp-m: 16px;
+    --esp-g: 24px;
+
+    --borda: 1px solid #ccc;
+    --raio: 5px;
+}
+body {
+    margin: 0;
+    font-family: var(--fonte-base);
+    background: var(--cor-fundo);
+    color: var(--cor-texto);
+}
+header {
+    background: var(--cor-header);
+    color: white;
+    padding: var(--esp-g);
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+nav ul li {
+    display: inline-block;
+    margin-right: 15px;
+}
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+main {
+    padding: var(--esp-g);
+    background: white;
+    margin: var(--esp-g);
+    border-radius: var(--raio);
+    border: var(--borda);
+}
+footer {
+    background: var(--cor-footer);
+    color: white;
+    text-align: center;
+    padding: var(--esp-m);
+}
+.menu-btn,
+.close-btn {
+    font-size: 30px;
+    padding: var(--esp-m);
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: white;
+}
+#menu-toggle {
+    display: none;
+}
+nav {
+    display: none;
+    background: var(--cor-header);
+    padding: var(--esp-m);
+}
+#menu-toggle:checked ~ nav {
+    display: block;
+}
+.close-btn {
+    display: none;
+}
+#menu-toggle:checked ~ .close-btn {
+    display: inline-block;
+}
+#menu-toggle:checked ~ .menu-btn {
+    display: none;
+}
+nav ul li {
+    display: block;
+    margin: 0;
+    padding: var(--esp-p) 0;
+}
+nav ul li a {
+    display: block;
+    padding: var(--esp-m);
+    border-bottom: var(--borda);
+}
+@media (min-width: 768px) {
+    nav {
+        display: flex !important;
+        justify-content: center;
+        gap: var(--esp-m);
+        padding: 0;
+    }
+
+    nav ul {
+        display: flex;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+    nav ul li {
+        display: inline-block;
+        margin: 0;
+    }
+
+    nav ul li a {
+        border: none;
+        padding: var(--esp-p);
+    }
+}

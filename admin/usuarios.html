@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Usuários</title>
+</head>
+<body>
+<header>
+    <h1>Área de Administração</h1>
+    <nav>
+        <ul>
+            <li><a href="../index.html">Página Inicial</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="objetos.html">Cadastro de Objetos</a></li>
+            <li><a href="usuarios.html">Cadastro de Usuários</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <h2>Cadastro/Edição de Usuário</h2>
+    <form>
+        <label for="nomeUsuario">Nome:</label><br>
+        <input type="text" id="nomeUsuario" name="nomeUsuario" required><br><br>
+
+        <label for="emailUsuario">Email:</label><br>
+        <input type="email" id="emailUsuario" name="emailUsuario" required><br><br>
+
+        <label for="senhaUsuario">Senha:</label><br>
+        <input type="password" id="senhaUsuario" name="senhaUsuario" required><br><br>
+
+        <button type="submit">Salvar</button>
+    </form>
+
+    <h2>Lista de Usuários</h2>
+    <table border="1" cellpadding="5">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Email</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Usuário Exemplo</td>
+                <td>exemplo@email.com</td>
+                <td>
+                    <button type="button">Editar</button>
+                    <button type="button">Apagar</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</main>
+
+<footer>
+    <p>Autor: César Carlos — <a href="../sobre.html">Sobre</a></p>
+</footer>
+</body>
+</html>
